@@ -1,0 +1,140 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #2c5364, #203a43, #0f2027);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Chat Container */
+.chat-container {
+    width: 450px;
+    max-width: 90%;
+    height: 80%;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* Chat Header */
+.chat-header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 15px;
+    text-align: center;
+    color: white;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.chat-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.chat-header p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Chatbox */
+.chatbox {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    background: #f7f9fc;
+    scrollbar-width: thin;
+    scrollbar-color: #667eea transparent;
+}
+
+.chatbox::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chatbox::-webkit-scrollbar-thumb {
+    background-color: #667eea;
+    border-radius: 4px;
+}
+
+/* Chat Messages */
+.chatbox p {
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 75%;
+    word-wrap: break-word;
+    animation: fadeIn 0.3s ease;
+}
+
+.user {
+    align-self: flex-end;
+    background: #007bff;
+    color: white;
+}
+
+.bot {
+    align-self: flex-start;
+    background: #eaeaea;
+    color: #333;
+}
+
+/* Input Box */
+.input-box {
+    display: flex;
+    padding: 10px;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+.input-box input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    font-size: 14px;
+}
+
+.input-box input:focus {
+    border: 2px solid #667eea;
+}
+
+.input-box button {
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.input-box button:hover {
+    background: #764ba2;
+}
+
+.send-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
